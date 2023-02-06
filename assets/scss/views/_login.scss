@@ -19,7 +19,7 @@
     @include flex(space-between, center, 1.5rem);
     @extend .flexCol;
 
-    form {
+    .form {
         width: 100%;
 
         display: inherit;

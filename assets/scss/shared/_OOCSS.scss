@@ -1,55 +1,105 @@
 @use "../assets.scss" as *;
 
-.footerMenu {
-    width: 100%;
+// HEADER - FOOTER
+    .mainMenus {
+        width: 100%;
+        padding: 0.75em 2em;
+        @extend .posFixed;
 
-    background-color: $lightBgGrey;
-
-    @extend .posFixed;
-    bottom: 0;
-
-    @include flex(space-between, center);
-    
-    &--welcome {
-        @extend .footerMenu;
-        @include flex(center, center);
+        * {
+            margin: 0;
+        }
     }
-}
-
-.mainInput {
-    padding: .75em 0.5em;
-
-    background-color: $lightBgGrey;
-    border: none;
-    border-bottom: 2px solid $mainBgGrey;
-
-    color: $darkBgGrey;
-}
-label + .mainInput {
-    margin-top: .75em;
-}
-
-.mainBtn {
-    min-height: 4lh;
-    padding: 1em;
-
-    @include flex(start, start);
-
-    border: none;
-    background-color: $mainBgBlue;
-
-    color: white;
-    font-size: 1.5rem;
-    text-align: left;
-
-    cursor: pointer;
-
-    &--center {
-        @extend .mainBtn;
-        text-align: center;
+    .mainMenus_img {
+        max-height: 2em;
     }
-    &--noHeight {
-        @extend .mainBtn;
-        min-height: none;
+    .headerMenu {
+        @extend .mainMenus;
+        background-color: $mainBgBlue;
+
+        top: 0;
+
+        @include flex(start, center, 1.5em);
+
+        color: white;
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 300;
+        }
+
+        & + main {
+            margin-top: 12.5vh;
+        }
     }
-}
+    .footerMenu {
+        @extend .mainMenus;
+        background-color: $lightBgGrey;
+
+        bottom: 0;
+
+        @include flex(space-between, center);
+        
+        &--welcome {
+            @extend .footerMenu;
+            justify-content: center;
+        }
+    }
+//
+
+
+// FORMS
+    .mainInput {
+        padding: .75em 0.5em;
+
+        background-color: $lightBgGrey;
+        border: none;
+        border-bottom: 2px solid $mainBgGrey;
+
+        color: $darkBgGrey;
+    }
+    label + .mainInput {
+        margin-top: .75em;
+    }
+//
+
+
+//BTNS
+    .mainBtn {
+        min-height: 4lh;
+        padding: 1em;
+        padding-right: 2.5em;
+
+        @include flex(start, start);
+
+        border: none;
+        background-color: $mainBgBlue;
+        
+        color: white;
+        font-size: 1.5rem;
+        text-align: left;
+
+        cursor: pointer;
+        
+        &--red, &--center, &--noHeight { @extend .mainBtn; }
+        &--red {
+            background-color: $mainBgRed;
+        }
+        &--center {
+            justify-content: center;
+            text-align: center;
+        }
+        &--noHeight {
+            min-height: none;
+        }
+    }
+
+    .sessionTag {
+        padding: .333em 0.666em;
+        display: inline-block;
+
+        border-radius: 100px;
+        background-color: $lightBgRed;
+
+        color: $mainBgRed   ;
+    }
+//

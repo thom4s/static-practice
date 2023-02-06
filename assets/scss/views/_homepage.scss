@@ -1,0 +1,52 @@
+@use "../assets.scss" as *;
+
+
+
+#home_main {
+    padding: 5vh 5vw;
+}
+
+.home_scheduledSessSection {
+    width: 100%;
+    max-width: 400px;
+    // display: inline-block;
+}
+.home_sectionH2 {
+    width: 100%;
+    border-bottom: 1px solid $mainFontBlack;
+}
+
+.home_sessionItem {
+    max-width: 100%;
+    width: 100%;
+}
+
+$maxH: 2em;
+.home_sessionItem_bottomWrapper {
+    max-height: $maxH;
+
+    @include flex(space-around, center, 1em);
+
+    .home_sessionItem_tagsWrapper {
+        height: $maxH;
+    }
+    .home_sessionItem_interactIcoWrapper {
+        height: $maxH;
+        @include flex(space-between, center, .75em);
+    }
+    .home_sessionItem_iconWrapper {
+        height: calc($maxH - 1em);
+        width: auto;
+
+        img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+
+// .home_passedSessSection {
+
+// }

@@ -17,6 +17,7 @@ section {
 }
 .home_sectionH2 {
     width: 100%;
+    max-width: 800px;
     border-bottom: 1px solid $mainFontBlack;
 }
 
@@ -58,12 +59,17 @@ $maxH: 2em;
 }
 
 
+.home_passedSessSection {
+    margin-top: 5vh;
+}
+
+
 
 @media screen and (min-width: calc($maxW*2)) {
     #home_main {
         padding: 4vh 2.5vw;
     
-        @include flex(space-between, start, 10%);
+        @include flex(space-between, start, 100px);
     }
 
     .home_scheduledSessSection {
@@ -81,27 +87,46 @@ $maxH: 2em;
     }
     .home_startSection {
         min-width: calc($maxW + 50px);
+        height: fit-content;
         padding: 10vh 1vw 1vh 1vw;
 
         position: fixed;
         bottom: 9vh;
         left: 1.5vw;
 
-        background: white;
-        background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
-        // -webkit-mask-image: linear-gradient(to top,black 10%,transparent 80%);
-        // mask-image: linear-gradient(to top,black 10%,transparent 80%);
-        backdrop-filter: blur(5px);
         
         // * > {
-        //     -webkit-mask-image: none;
-        //     mask-image: none;
-        //     z-index: 10;
-        // }
+            //     -webkit-mask-image: none;
+            //     mask-image: none;
+            //     z-index: 10;
+            // }
+        .home_startSection_bgdBlur {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            
+            background: white;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 100%);
+            // -webkit-mask-image: linear-gradient(to top,black 10%,transparent 80%);
+            // mask-image: linear-gradient(to top,black 10%,transparent 80%);
+            backdrop-filter: blur(2px);
+        }
+        .home_startSection_btns {
+            // background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, rgba(255,255,255,0) 100%);
+            backdrop-filter: blur(2px);
+            z-index: 11;
+        }
     }
 
+    .home_passedSessSection{
+        margin-top: 0;
+    }
     .home_passedSessSection_itemsWrapper {
-        @include flex(start, start);
+        @include flex(start, start, 1em);
         flex-wrap: wrap;
     }
 }

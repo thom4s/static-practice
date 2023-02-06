@@ -110,3 +110,15 @@
         color: $mainBgRed   ;
     }
 //
+
+
+
+@media screen and (min-width: 800px) {
+    .footerMenu {
+        padding-right: 80%;
+        
+        &--welcome {
+            padding-right: unset;            
+        }
+    }
+}

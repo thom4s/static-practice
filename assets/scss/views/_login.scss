@@ -31,7 +31,12 @@
     }
 
     .logSubmit {
-        @include flex(space-between, end)
+        @include flex(space-between, end);
+        
+        &--register {
+            @extend .logSubmit;
+            justify-content: end;
+        }
     }
     .mainBtn {
         min-width: 100px;
@@ -42,11 +47,10 @@
 
         font-weight: 600;
     }
-    .login_registerLink{
+    .login_register_link{
         $afterIcoSize: 1.25em;
         display: inline-block;
         position: relative;
-        margin-right: calc($afterIcoSize*2);
         
         color: inherit;
         font-size: 2rem;
@@ -62,12 +66,35 @@
 
             @extend .posAbsolute;
             bottom: 0;
-            right: calc($afterIcoSize - $afterIcoSize*3);
-
+            
             background-image: url("../img/ico_forward--blue.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
         }
+        &--right {
+            @extend .login_register_link;
+            margin-right: calc($afterIcoSize*2);
+
+            &::after {
+                right: calc($afterIcoSize - $afterIcoSize*3);
+            }
+        }
+        &--left {
+            @extend .login_register_link;
+            margin-left: calc($afterIcoSize*2);
+
+            &::after {
+                left: calc($afterIcoSize - $afterIcoSize*3);
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.login_formWrapper--register {
+    @extend .login_formWrapper;
+    
+    aside {
+        align-self: flex-start;
     }
 }

@@ -1,9 +1,10 @@
+/* COULEURS */
 /* Position & Display classes */
 .posFixed, .footerMenu, .footerMenu--welcome {
   position: fixed;
 }
 
-.posAbsolute {
+.posAbsolute, .login_formWrapper .login_registerLink::after {
   position: absolute;
 }
 
@@ -12,12 +13,30 @@
 }
 
 /* Size & space classes */
-.marginInlineCenter, .login_formWrapper {
+.marginInlineCenter {
   margin-inline: auto;
 }
 
 .marginBlockCenter {
   margin-block: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+  color: #181818;
 }
 
 .footerMenu, .footerMenu--welcome {
@@ -36,32 +55,98 @@
   gap: 0;
 }
 
-* {
-  box-sizing: border-box;
+.mainInput {
+  padding: 0.75em 0.5em;
+  background-color: #EDEDED;
+  border: none;
+  border-bottom: 2px solid #D9D9D9;
+  color: #A3A3A3;
 }
 
-html {
-  min-height: 100vh;
-  font-size: 62.5%;
+label + .mainInput {
+  margin-top: 0.75em;
 }
 
-body {
+.mainBtn, .mainBtn--noHeight, .mainBtn--center {
+  min-height: 4lh;
+  padding: 1em;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+  border: none;
+  background-color: #0F62FE;
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+}
+.mainBtn--center {
+  text-align: center;
+}
+.mainBtn--noHeight {
+  min-height: none;
+}
+
+#login_main {
+  width: 100%;
   min-height: inherit;
-  position: relative;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 
 .login_formWrapper {
-  width: clamp(60%, 1000px, 90%);
-  margin-top: clamp(200px, 15%, 350px);
+  width: clamp(60%, 90%, 800px);
+  max-width: 800px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 }
 .login_formWrapper form {
+  width: 100%;
   display: inherit;
   flex-direction: inherit;
+}
+.login_formWrapper label, .login_formWrapper .logSubmit, .login_formWrapper aside {
+  margin-top: 3rem;
+}
+.login_formWrapper .logSubmit {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0;
+}
+.login_formWrapper .mainBtn {
+  min-width: 100px;
+}
+.login_formWrapper aside {
+  align-self: flex-end;
+  font-weight: 600;
+}
+.login_formWrapper .login_registerLink {
+  display: inline-block;
+  position: relative;
+  margin-right: 2.5em;
+  color: inherit;
+  font-size: 2rem;
+  font-weight: inherit;
+  text-decoration: none;
+}
+.login_formWrapper .login_registerLink::after {
+  width: 1.25em;
+  height: 1.25em;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  right: -2.5em;
+  background-image: url("../img/ico_forward--blue.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=style.css.map */

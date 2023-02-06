@@ -15,3 +15,41 @@
         @include flex(center, center);
     }
 }
+
+.mainInput {
+    padding: .75em 0.5em;
+
+    background-color: $lightBgGrey;
+    border: none;
+    border-bottom: 2px solid $mainBgGrey;
+
+    color: $darkBgGrey;
+}
+label + .mainInput {
+    margin-top: .75em;
+}
+
+.mainBtn {
+    min-height: 4lh;
+    padding: 1em;
+
+    @include flex(start, start);
+
+    border: none;
+    background-color: $mainBgBlue;
+
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+
+    cursor: pointer;
+
+    &--center {
+        @extend .mainBtn;
+        text-align: center;
+    }
+    &--noHeight {
+        @extend .mainBtn;
+        min-height: none;
+    }
+}

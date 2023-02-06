@@ -11,24 +11,28 @@
 </head>
 <body>
 
-    <main class="login_formWrapper">
-        <form action="">
-            <label for="user_mail">Login</label>
-            <input type="email" name="user_mail" id="">
-            <label for="user_password">Password</label>
-            <input type="password" name="user_password" id="">
-
-            <div class="login_keepUserLogged_wrapper">
-                <input type="checkbox" name="keepUserLogged" id="">
-                <label for="keepUserLogged">Keep Me logged In</label>
-            </div>
-
-            <input type="submit" value="Login">
-        </form>
-
-        <aside>
-            <a class="login_registerLink" href="register.html">I'd like to register</a>
-        </aside>
+    <main id="login_main">
+        <div class="login_formWrapper">
+            <form action="">
+                <label for="user_mail">Login</label>
+                <input class="mainInput" type="email" name="user_mail" id="" placeholder="Enter your email adress">
+                <label for="user_password">Password</label>
+                <input class="mainInput" type="password" name="user_password" id="" placeholder="Enter your password">
+    
+                <div class="logSubmit">
+                    <div class="login_elWrapper" id="keepLoggedWrapper">
+                        <input type="checkbox" name="keepUserLogged" id="">
+                        <label for="keepUserLogged">Keep Me logged In</label>
+                    </div>
+    
+                    <button class="mainBtn" type="submit">Login</button>
+                </div>
+            </form>
+    
+            <aside>
+                <a class="login_registerLink" href="register.html">I'd like to register</a>
+            </aside>
+        </div>
     </main>
 
     <footer class="footerMenu--welcome">

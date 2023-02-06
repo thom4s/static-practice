@@ -2,16 +2,72 @@
 
 
 
+#login_main {
+    width: 100%;
+    min-height: inherit;
+
+    @include flex(center, center)
+}
+
 .login_formWrapper {
-    width: clamp(60%, 1000px, 90%);
-    @extend .marginInlineCenter;
-    margin-top: clamp(200px, 15%, 350px);
+    width: clamp(60%, 90%, 800px);
+    max-width: 800px;
+    height: fit-content;
+    // @extend .marginInlineCenter;
+    // margin-top: clamp(200px, 15%, 350px);
 
     @include flex(space-between, center, 1.5rem);
     @extend .flexCol;
 
     form {
+        width: 100%;
+
         display: inherit;
         flex-direction: inherit;
+    }
+
+    label, .logSubmit, aside {
+        margin-top: 3rem;
+    }
+
+    .logSubmit {
+        @include flex(space-between, end)
+    }
+    .mainBtn {
+        min-width: 100px;
+    }
+
+    aside {
+        align-self: flex-end;
+
+        font-weight: 600;
+    }
+    .login_registerLink{
+        $afterIcoSize: 1.25em;
+        display: inline-block;
+        position: relative;
+        margin-right: calc($afterIcoSize*2);
+        
+        color: inherit;
+        font-size: 2rem;
+        font-weight: inherit;
+        text-decoration: none;
+
+        &::after {
+            width: $afterIcoSize;
+            height: $afterIcoSize;
+
+            content: "";
+            display: inline-block;
+
+            @extend .posAbsolute;
+            bottom: 0;
+            right: calc($afterIcoSize - $afterIcoSize*3);
+
+            background-image: url("../img/ico_forward--blue.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
     }
 }

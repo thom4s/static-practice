@@ -1,0 +1,18 @@
+/* Position & Display classes */
+.posFixed {
+    position: fixed;
+}
+.posAbsolute {
+    position: absolute;
+}
+.flexCol {
+    flex-direction: column;
+}
+
+/* Size & space classes */
+.marginInlineCenter {
+    margin-inline: auto;
+}
+.marginBlockCenter {
+    margin-block: auto;
+}

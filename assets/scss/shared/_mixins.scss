@@ -1,0 +1,14 @@
+@use "atomic";
+
+@mixin flex($justify, $align, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin absoluteEl($transformX: 0, $transformY: 0) {
+    position: absolute;
+    // inset: $pos1 $pos2 $pos3 $pos4;
+    transform: translate($transformX, $transformY);
+}

@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    font-size: 62.5%;
+}
+
+body {
+    min-height: inherit;
+    position: relative;
+    font-size: 16px;
+}

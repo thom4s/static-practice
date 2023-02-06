@@ -1,0 +1,67 @@
+/* Position & Display classes */
+.posFixed, .footerMenu, .footerMenu--welcome {
+  position: fixed;
+}
+
+.posAbsolute {
+  position: absolute;
+}
+
+.flexCol, .login_formWrapper {
+  flex-direction: column;
+}
+
+/* Size & space classes */
+.marginInlineCenter, .login_formWrapper {
+  margin-inline: auto;
+}
+
+.marginBlockCenter {
+  margin-block: auto;
+}
+
+.footerMenu, .footerMenu--welcome {
+  width: 100%;
+  background-color: #EDEDED;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.footerMenu--welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: inherit;
+  position: relative;
+  font-size: 16px;
+}
+
+.login_formWrapper {
+  width: clamp(60%, 1000px, 90%);
+  margin-top: clamp(200px, 15%, 350px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.login_formWrapper form {
+  display: inherit;
+  flex-direction: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

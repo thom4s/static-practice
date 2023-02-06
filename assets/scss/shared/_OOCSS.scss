@@ -1,0 +1,17 @@
+@use "../assets.scss" as *;
+
+.footerMenu {
+    width: 100%;
+
+    background-color: $lightBgGrey;
+
+    @extend .posFixed;
+    bottom: 0;
+
+    @include flex(space-between, center);
+    
+    &--welcome {
+        @extend .footerMenu;
+        @include flex(center, center);
+    }
+}

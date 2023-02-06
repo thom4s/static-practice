@@ -1,0 +1,17 @@
+@use "../assets.scss" as *;
+
+
+
+.login_formWrapper {
+    width: clamp(60%, 1000px, 90%);
+    @extend .marginInlineCenter;
+    margin-top: clamp(200px, 15%, 350px);
+
+    @include flex(space-between, center, 1.5rem);
+    @extend .flexCol;
+
+    form {
+        display: inherit;
+        flex-direction: inherit;
+    }
+}

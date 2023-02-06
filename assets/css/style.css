@@ -249,7 +249,7 @@ section {
 
 @media screen and (min-width: 800px) {
   #home_main {
-    padding: 5vh 2.5vw;
+    padding: 4vh 2.5vw;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -258,7 +258,15 @@ section {
 
   .home_scheduledSessSection {
     max-height: 75vh;
+    padding-bottom: 20vh;
     overflow-y: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  }
+  .home_scheduledSessSection::-webkit-scrollbar {
+    display: none;
   }
 
   .home_startSection {

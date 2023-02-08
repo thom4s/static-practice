@@ -33,7 +33,7 @@
     .logSubmit {
         @include flex(space-between, end);
         
-        &--register {
+        &--1El {
             @extend .logSubmit;
             justify-content: end;
         }
@@ -112,6 +112,5 @@
     }
 }
 .register2_submit {
-    width: 100%;
     @include flex(space-between, end);
 }

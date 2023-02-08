@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
         
     <title>PracticeLog - Register</title>
 </head>
 <body>
         
     <main id="login_main">
-        <div class="login_formWrapper--register">
+        <div class="login_formWrapper--register main--cardStyle">
             <aside>
                 <a class="login_register_link--left" href="/">Return to login</a>
             </aside>
@@ -52,14 +52,19 @@
                 <div class="register2_notifs">
                     <h2>Can we send you notifications ?</h2>
                     
-                    <label for="notifs">No</label>
-                    <input type="checkbox" name="notifs" id="" value="y">
-                    <label for="notifs">Yes</label>
-                </div>
+                    <div class="toggleSwitch_wrapper">
+                        <label for="notifs">No</label>
+                        <label class="toggleSwitch--small">
+                            <input type="checkbox" name="notifs" id="" value="y">
+                            <span></span>
+                        </label>
+                        <label for="notifs">Yes</label>
+                    </div>
+                    </div>
                 
-                <div class="register2_submit">
-                    <a class="mainBtn--red" href="/register2.html">Skip</a>
-                    <a class="mainBtn" href="/register2.html">Register</a>
+                <div class="logSubmit">
+                    <a class="mainBtn--red" href="/home.html">Skip</a>
+                    <a class="mainBtn" href="register/3.html">Save</a>
                 </div>
             </div>
         </div>

@@ -45,10 +45,9 @@
             @extend .footerMenu;
             justify-content: center;
         }
-
-        & + main {
-            margin-bottom: $maxH;
-        }
+    }
+    main {
+        margin-bottom: $maxH;
     }
 //
 
@@ -72,11 +71,12 @@
 //BTNS
     .mainBtn {
         min-height: 4lh;
+        max-width: 250px;
         padding: 1em;
         padding-right: 2.5em;
 
         @include flex(start, start);
-
+        
         border: none;
         background-color: $mainBgBlue;
         
@@ -84,11 +84,13 @@
         font-size: 1.5rem;
         text-align: left;
         text-decoration: none;
-
+        
         cursor: pointer;
         
         &--red, &--center, &--noHeight { @extend .mainBtn; }
         &--red {
+            min-height: 3lh;
+            font-size: 1.25rem;
             background-color: $mainBgRed;
         }
         &--center {
@@ -115,10 +117,7 @@
 
 @media screen and (min-width: 800px) {
     .footerMenu {
-        padding-right: 80%;
-        
-        &--welcome {
-            padding-right: unset;            
-        }
+        justify-content: center;
+        gap: 7.5vw;
     }
 }

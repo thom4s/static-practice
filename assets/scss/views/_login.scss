@@ -93,8 +93,25 @@
 }
 .login_formWrapper--register {
     @extend .login_formWrapper;
-    
+
     aside {
         align-self: flex-start;
     }
+}
+
+
+
+
+
+.register_introTxt {
+    width: 100%;
+    text-align: left;
+
+    .h2 {
+        margin-bottom: 0;
+    }
+}
+.register2_submit {
+    width: 100%;
+    @include flex(space-between, end);
 }

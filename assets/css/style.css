@@ -21,6 +21,22 @@
   margin-block: auto;
 }
 
+/* Fonts classes */
+.h, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 800;
+}
+.h1 {
+  font-size: 2em;
+}
+.h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -79,7 +95,8 @@ body {
 .footerMenu--welcome {
   justify-content: center;
 }
-.footerMenu + main, .footerMenu--welcome + main {
+
+main {
   margin-bottom: 6rem;
 }
 
@@ -97,6 +114,7 @@ label + .mainInput {
 
 .mainBtn, .mainBtn--red, .mainBtn--center, .mainBtn--noHeight {
   min-height: 4lh;
+  max-width: 250px;
   padding: 1em;
   padding-right: 2.5em;
   display: flex;
@@ -112,6 +130,8 @@ label + .mainInput {
   cursor: pointer;
 }
 .mainBtn--red {
+  min-height: 3lh;
+  font-size: 1.25rem;
   background-color: #DA1E28;
 }
 .mainBtn--center {
@@ -132,10 +152,8 @@ label + .mainInput {
 
 @media screen and (min-width: 800px) {
   .footerMenu, .footerMenu--welcome {
-    padding-right: 80%;
-  }
-  .footerMenu--welcome {
-    padding-right: unset;
+    justify-content: center;
+    gap: 7.5vw;
   }
 }
 #login_main {
@@ -215,6 +233,22 @@ label + .mainInput {
 
 .login_formWrapper--register aside {
   align-self: flex-start;
+}
+
+.register_introTxt {
+  width: 100%;
+  text-align: left;
+}
+.register_introTxt .h2 {
+  margin-bottom: 0;
+}
+
+.register2_submit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0;
 }
 
 #home_main {
@@ -320,7 +354,6 @@ section {
     backdrop-filter: blur(2px);
   }
   .home_startSection .home_startSection_btns {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(2px);
     z-index: 11;
   }
